@@ -75,23 +75,4 @@ Simulation:
 Use a VHDL simulator (such as ModelSim, Vivado Simulator, or GHDL) to simulate the design. Create a testbench that drives the clock, start, and reset inputs, and observe the outputs (counter values and display segments).
 
 Synthesis:
-The design can be synthesized for FPGAs. Make sure to configure the target device's clock frequency to match the clkfreq generic. The constraints file should properly assign the clock, button inputs, and seven-segment display outputs (anode and cathode pins).
-
-Usage
-Compile the VHDL files in your preferred synthesis tool or simulation environment.
-Simulate the design using a testbench that applies the appropriate clock, start, and reset signals.
-Synthesize and load the design onto your target FPGA board.
-Connect the seven-segment displays and push-buttons according to your board’s constraints.
-Operate the stopwatch using the start and reset buttons.
-File Structure
-bash
-Kopyala
-Stopwatch/
-├── src/
-│   ├── top.vhd            # Top-level entity integrating the design.
-│   ├── debounce.vhd       # Debounce component.
-│   ├── counter.vhd        # BCD counter component.
-│   └── sevensegment.vhd   # Seven-segment display driver.
-├── tb/
-│   └── top_tb.vhd         # Testbench for simulation.
-└── README.md              # This file.
+The design can be synthesized for FPGAs. Make sure to configure the target device's clock frequency to match the clkfreq generic. The constraints file should properly assign the clock, button inputs, and seven-segment display outputs (anode and cathode pins).ds
